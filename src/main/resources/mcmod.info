@@ -1,0 +1,16 @@
+[
+{
+  "modid": "BloodUtils",
+  "name": "BloodUtils",
+  "description": "A Blood Magic Addon",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Wasliebob"],
+  "credits": "AWayOfTime for making BloodMagic",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,0 +1,70 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+    }
+}
+
+apply plugin: 'forge'
+
+version = "1.0_B${buildnumber}"
+group= "BloodUtils" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "BloodUtils"
+
+minecraft {
+    version = "1.7.10-10.13.0.1208"
+    assetDir = "eclipse/assets"
+}
+
+
+ext.buildnumber = 0
+if(System.getenv('BUILD_NUMBER') != null)
+    project.buildnumber = System.getenv('BUILD_NUMBER')
+
+dependencies{
+	compile files(
+	'deps/BloodMagic.jar',
+	'deps/WaslieCore.jar'
+	)
+}
+
+task deps{
+	project.mkdir("deps")
+	
+	def bm = new File('deps/BloodMagic.jar')
+	new URL('https://dl.dropboxusercontent.com/u/46500170/Blood%20Utils/deps/BloodMagic.jar').withInputStream{ i -> bm.withOutputStream{ it << i }}
+	
+	def wsc = new File('deps/WaslieCore.jar')
+	new URL('https://dl.dropboxusercontent.com/u/46500170/Blood%20Utils/deps/WaslieCore.jar').withInputStream{ i -> wsc.withOutputStream{ it << i }}
+}
+
+processResources
+{
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+build.dependsOn deps
