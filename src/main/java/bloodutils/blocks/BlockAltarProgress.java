@@ -22,9 +22,10 @@ public class BlockAltarProgress extends BUBlock{
 
 		if(altar != null){
 			if(!world.isRemote && !player.isSneaking()){
+				player.addChatComponentMessage(new ChatComponentText("Stored: " + altar.getCurrentBlood() + "/" + altar.getCapacity()));
+				player.addChatComponentMessage(new ChatComponentText("Tier: " + altar.getTier()));
 				if(altar.getStackInSlot(0) != null){
 					AltarRecipe recipe = AltarRecipeRegistry.getAltarRecipeForItemAndTier(altar.getStackInSlot(0), altar.getTier());
-					
 					if(recipe != null && recipe.getResult() != null){
 						player.addChatComponentMessage(new ChatComponentText("Progress: " + altar.getProgress() + "/" + recipe.getLiquidRequired()));
 						player.addChatComponentMessage(new ChatComponentText("Output: " + recipe.getResult().getDisplayName()));

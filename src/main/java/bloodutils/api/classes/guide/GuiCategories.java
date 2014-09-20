@@ -30,7 +30,7 @@ public class GuiCategories extends GuiScreen{
 		y = (this.height/2) - (gheight/2);
 		this.buttonList.clear();
 		
-		int pX = x + 4;
+		int pX = x + 3;
 		int pY = y + 15;
 		
 		int iWidth = 16;

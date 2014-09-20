@@ -17,6 +17,10 @@ buildscript {
 
 apply plugin: 'forge'
 
+ext.buildnumber = 0
+if(System.getenv('BUILD_NUMBER') != null)
+    project.buildnumber = System.getenv('BUILD_NUMBER')
+
 version = "1.0_B${buildnumber}"
 group= "BloodUtils" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "BloodUtils"
@@ -25,11 +29,6 @@ minecraft {
     version = "1.7.10-10.13.0.1208"
     assetDir = "eclipse/assets"
 }
-
-
-ext.buildnumber = 0
-if(System.getenv('BUILD_NUMBER') != null)
-    project.buildnumber = System.getenv('BUILD_NUMBER')
 
 dependencies{
 	compile files(
@@ -50,10 +49,6 @@ task deps{
 
 processResources
 {
-    // this will ensure that this task is redone when the versions change.
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
-
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'

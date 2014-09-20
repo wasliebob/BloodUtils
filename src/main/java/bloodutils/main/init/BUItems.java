@@ -1,5 +1,6 @@
 package bloodutils.main.init;
 
+import net.minecraft.item.Item;
 import wasliecore.interfaces.IInitalization;
 import bloodutils.items.ItemGuide;
 import bloodutils.items.sigils.SigilRitual;
@@ -24,7 +25,6 @@ public class BUItems implements IInitalization{
 	
 	public void initItems(){
 		sigil_ritual = new SigilRitual("Ritual Sigil");
-		
 		guide = new ItemGuide("Blood Tome");
 	}
 	public static SigilRitual sigil_ritual;

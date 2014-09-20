@@ -52,7 +52,7 @@ public class GuiIndex extends GuiScreen{
 	}
 	
 	public void drawCategories(){
-		int pX = left + 4;
+		int pX = left + 3;
 		int pY = top + 15;
 		
 		int iWidth = 16;

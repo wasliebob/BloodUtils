@@ -23,7 +23,7 @@ public class EntryRegistry {
 		if(maxEntries.containsKey(category) && entry.indexPage > maxEntries.get(category))
 			maxEntries.put(category, entry.indexPage);
 		else if(!maxEntries.containsKey(category))
-			maxEntries.put(category, 1);
+			maxEntries.put(category, 0);
 
 	}
 	public static HashMap<Category, HashMap<String, Entry>> entries = new HashMap<Category, HashMap<String, Entry>>(); 

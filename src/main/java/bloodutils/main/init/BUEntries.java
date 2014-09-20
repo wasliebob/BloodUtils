@@ -2,9 +2,11 @@ package bloodutils.main.init;
 
 import net.minecraft.item.ItemStack;
 import wasliecore.interfaces.IInitalization;
+import WayofTime.alchemicalWizardry.ModBlocks;
 import WayofTime.alchemicalWizardry.ModItems;
 import bloodutils.api.compact.Category;
 import bloodutils.api.compact.Entry;
+import bloodutils.api.entries.EntryBlock;
 import bloodutils.api.entries.EntryRitualInfo;
 import bloodutils.api.entries.EntryText;
 import bloodutils.api.entries.IEntry;
@@ -41,7 +43,7 @@ public class BUEntries implements IInitalization{
 	}
 	
 	public void initEntries(){
-		theAltar = new Entry(new IEntry[]{new EntryText()}, "The Altar", 1);
+		theAltar = new Entry(new IEntry[]{new EntryText()}, "Blood Altar", 1);
 		
 		/** Page 1 */
 		ritualWater = new Entry(new IEntry[]{new EntryText()}, "Full Spring", 1);
