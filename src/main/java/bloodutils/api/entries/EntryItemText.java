@@ -19,8 +19,8 @@ import org.lwjgl.opengl.GL12;
 
 import bloodutils.api.classes.guide.GuiEntry;
 
-public class EntryBlockText implements IEntry{
-	public EntryBlockText(ItemStack stack){
+public class EntryItemText implements IEntry{
+	public EntryItemText(ItemStack stack){
 		this.stack = stack;
 	}
 	public ItemStack stack;

@@ -6,7 +6,9 @@ import WayofTime.alchemicalWizardry.ModBlocks;
 import WayofTime.alchemicalWizardry.ModItems;
 import bloodutils.api.compact.Category;
 import bloodutils.api.compact.Entry;
-import bloodutils.api.entries.EntryBlockText;
+import bloodutils.api.entries.EntryAltarRecipe;
+import bloodutils.api.entries.EntryCraftingRecipe;
+import bloodutils.api.entries.EntryItemText;
 import bloodutils.api.entries.EntryRitualInfo;
 import bloodutils.api.entries.EntryText;
 import bloodutils.api.entries.IEntry;
@@ -22,8 +24,14 @@ public class BUEntries implements IInitalization{
 	
 	@Override
 	public void init(){
+		
+	}
+	
+	
+	@Override
+	public void postInit(){
 		initCategories();
-		initEntries();
+		initEntries();	
 	}
 	
 	public void initCategories(){
@@ -43,8 +51,8 @@ public class BUEntries implements IInitalization{
 	}
 	
 	public void initEntries(){
-		theAltar = new Entry(new IEntry[]{new EntryBlockText(new ItemStack(ModBlocks.blockAltar))}, "Blood Altar", 1);
-		runes = new Entry(new IEntry[]{new EntryBlockText(new ItemStack(ModBlocks.runeOfSelfSacrifice)), new EntryBlockText(new ItemStack(ModBlocks.runeOfSacrifice)), new EntryBlockText(new ItemStack(ModBlocks.speedRune))}, "Runes", 1);
+		theAltar = new Entry(new IEntry[]{new EntryItemText(new ItemStack(ModBlocks.blockAltar))}, "Blood Altar", 1);
+		runes = new Entry(new IEntry[]{new EntryItemText(new ItemStack(ModBlocks.runeOfSelfSacrifice)), new EntryItemText(new ItemStack(ModBlocks.runeOfSacrifice)), new EntryItemText(new ItemStack(ModBlocks.speedRune))}, "Runes", 1);
 		
 		/** Page 1 */
 		ritualWater = new Entry(new IEntry[]{new EntryText()}, "Full Spring", 1);
@@ -63,15 +71,19 @@ public class BUEntries implements IInitalization{
 		ritualSoul = new Entry(new IEntry[]{new EntryText(), new EntryText()}, "Eternal Soul", 1);
 		
 		ritualCure = new Entry(new IEntry[]{new EntryText(), new EntryRitualInfo(500)}, "Curing", 1);
-	
+		blockDivination = new Entry(new IEntry[]{new EntryItemText(new ItemStack(BUBlocks.altarProgress)), new EntryCraftingRecipe(BURecipes.altarProgress)}, "Divination Block", 1);
+		sigilAdvancedDivination = new Entry(new IEntry[]{new EntryItemText(new ItemStack(BUItems.sigil_advancedDivination)), new EntryAltarRecipe(BURecipes.advancedSigil)}, "Advanced Divination", 1);
+		
 		/** Debug */
-		debug = new Entry(new IEntry[]{new EntryBlockText(new ItemStack(ModBlocks.blockAltar))}, "Debug", 1);
+		debug = new Entry(new IEntry[]{new EntryItemText(new ItemStack(ModBlocks.blockAltar))}, "Debug", 1);
 		registerEntries();
 	}
 	public static Entry theAltar;
 	public static Entry runes;
 	
 	public static Entry ritualCure;
+	public static Entry sigilAdvancedDivination;
+	public static Entry blockDivination;
 
 	public static Entry ritualWater;
 	public static Entry ritualLava;
@@ -110,13 +122,10 @@ public class BUEntries implements IInitalization{
 		EntryRegistry.registerEntry(BUEntries.categoryRituals, EntryRegistry.rituals, BUEntries.ritualSoul);
 	
 		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.ritualCure);
-		
+		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.blockDivination);
+		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.sigilAdvancedDivination);
+
 		/** Debug */
 		EntryRegistry.registerEntry(BUEntries.categoryBasics, EntryRegistry.basics, BUEntries.debug);
-	}
-	
-	@Override
-	public void postInit(){
-		
 	}
 }

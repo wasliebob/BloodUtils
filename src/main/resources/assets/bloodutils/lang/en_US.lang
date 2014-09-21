@@ -1,5 +1,7 @@
 ==Items==
 item.ritual sigil.name=Ritual Sigil
+item.advanced divination sigil.name=Advanced Divination Sigil
+item.creative tool.name=Creative Tool
 item.blood tome.name=Blood Tome
 ==Blocks==
 tile.altar progression checker.name=Divination Block
@@ -9,6 +11,8 @@ bu.entry.Blood Altar.1=The altar is the first thing you most likely want to make
 bu.entry.Runes.1=The Rune of Self-Sacrifice is a rune which increases the amount of essence you get for sacrificing yourself by 10 percent.
 bu.entry.Runes.2=The Rune of Sacrifice is a rune which increases the amount of essence you get from mobs by 10 percent.
 bu.entry.Runes.3=The Speed Rune is a rune which increases the speed of your altar by 20 percent.
+bu.entry.Advanced Divination.1=The Advanced Divination Sigil is an advanced version of the Divination Sigil, displaying some extra info like progress and essence obtained by (self)sacrificing.
+bu.entry.Divination Block.1=The Divination Block is basicly a block version of the Advanced Divination Sigil.
 bu.entry.Full Spring.1=By jumpstarting the ritual with 500LP, you can create a simple infinite spring that will always replenish itself - at the cost of 25 LP per source block. If you have a pump, and are afraid of things like server lag causing a water source to not materialize, try this easy infinite water! Buckets also work on this thing!
 bu.entry.Nether.1=A bit more hellish of a ritual, this process will allow an infinite source of lava to be added to the world at an activation cost of 10000LP, but 500LP per source.
 bu.entry.Nether.2=It is intended for people who would otherwise pump the Nether dry, and offers up instead a lag-less alternative. You still need a pump, though, so don't forget that. Or a bucket - that works, too!

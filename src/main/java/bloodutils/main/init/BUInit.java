@@ -6,8 +6,8 @@ public class BUInit{
 	public static BUItems items = new BUItems();
 	public static BUBlocks blocks = new BUBlocks();
 	public static BURituals rituals = new BURituals();
-	public static BUEntries entries = new BUEntries();
 	public static BURecipes recipes = new BURecipes();
+	public static BUEntries entries = new BUEntries();
 
 	public static void preInit() {
 		items.preInit();

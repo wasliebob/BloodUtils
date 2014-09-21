@@ -1,8 +1,9 @@
 package bloodutils.main.init;
 
-import net.minecraft.item.Item;
 import wasliecore.interfaces.IInitalization;
+import bloodutils.items.ItemCreativeTool;
 import bloodutils.items.ItemGuide;
+import bloodutils.items.sigils.SigilAdvancedDivination;
 import bloodutils.items.sigils.SigilRitual;
 
 public class BUItems implements IInitalization{
@@ -25,8 +26,12 @@ public class BUItems implements IInitalization{
 	
 	public void initItems(){
 		sigil_ritual = new SigilRitual("Ritual Sigil");
+		sigil_advancedDivination = new SigilAdvancedDivination("Advanced Divination Sigil");
 		guide = new ItemGuide("Blood Tome");
+		tool_creative = new ItemCreativeTool("Creative Tool");
 	}
 	public static SigilRitual sigil_ritual;
+	public static SigilAdvancedDivination sigil_advancedDivination;
 	public static ItemGuide guide;
+	public static ItemCreativeTool tool_creative;
 }
