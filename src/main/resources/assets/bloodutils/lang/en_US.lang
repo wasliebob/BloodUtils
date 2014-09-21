@@ -30,6 +30,7 @@ bu.entry.Crusher.1=One of the more useful rituals, this ritual will search the 3
 bu.entry.Magnetism.1=This ritual searches in a 7x7 area beneath itself and looks for any ores - when it finds one, it sucks it to the surface and places it inside of the 3x3x3 volume in the ritual. This will be handy for anyone that wishes to quarry a decent area without having to worry about leaving huge holes.
 bu.entry.Eternal Soul.1=Meant to be the pinnacle of self-sacrifice, this ritual will use your body as a conduit to fill the nearby altar from your Soul Network. For every LP that it puts into the altar, it will take 2LP from your Network, and will only function while the activator is around the ritual.
 bu.entry.Eternal Soul.2=What is more, it will put the LP into the input buffer of the altar. It's best to use good runes for your altar to maximize the benefits. Also, while in the ritual's effect and when work is being done, the user's health will be set to 1 heart. Make sure to only use this ritual in a safe place or near your comrades. 
-bu.entry.Curing.1=This ritual can really become helpfull, this ritual cures a player from all potion effects, it basicly works like milk.
+bu.entry.Curing.1=This ritual can become really helpful, this ritual cures a player from all potion effects, it basicly works like milk.
+bu.entry.Debug.1=Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
 ==Misc==
 itemGroup.tabBloodUtilsMain=Blood Utils: Main

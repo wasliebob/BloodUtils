@@ -6,7 +6,7 @@ import WayofTime.alchemicalWizardry.ModBlocks;
 import WayofTime.alchemicalWizardry.ModItems;
 import bloodutils.api.compact.Category;
 import bloodutils.api.compact.Entry;
-import bloodutils.api.entries.EntryBlock;
+import bloodutils.api.entries.EntryBlockText;
 import bloodutils.api.entries.EntryRitualInfo;
 import bloodutils.api.entries.EntryText;
 import bloodutils.api.entries.IEntry;
@@ -62,6 +62,9 @@ public class BUEntries implements IInitalization{
 		ritualSoul = new Entry(new IEntry[]{new EntryText(), new EntryText()}, "Eternal Soul", 1);
 		
 		ritualCure = new Entry(new IEntry[]{new EntryText(), new EntryRitualInfo(500)}, "Curing", 1);
+	
+		/** Debug */
+		debug = new Entry(new IEntry[]{new EntryBlockText(new ItemStack(ModBlocks.blockAltar))}, "Debug", 1);
 		registerEntries();
 	}
 	public static Entry theAltar;
@@ -83,6 +86,8 @@ public class BUEntries implements IInitalization{
 	public static Entry ritualMoon;
 	public static Entry ritualSoul;
 	
+	public static Entry debug;
+	
 	public void registerEntries(){
 		EntryRegistry.registerEntry(BUEntries.categoryBasics, EntryRegistry.basics, BUEntries.theAltar);
 		
@@ -102,7 +107,9 @@ public class BUEntries implements IInitalization{
 		EntryRegistry.registerEntry(BUEntries.categoryRituals, EntryRegistry.rituals, BUEntries.ritualSoul);
 	
 		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.ritualCure);
-
+		
+		/** Debug */
+		EntryRegistry.registerEntry(BUEntries.categoryBasics, EntryRegistry.basics, BUEntries.debug);
 	}
 	
 	@Override

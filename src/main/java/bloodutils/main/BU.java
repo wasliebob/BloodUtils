@@ -20,23 +20,22 @@ public class BU {
  
     @Instance("BloodUtils")
     public static BU instance;
-    public static BUInit init = new BUInit();
     
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event){
 		proxy.load();
-		init.preInit();
+		BUInit.preInit();
     }
     
     @EventHandler
     public void init(FMLInitializationEvent event){
-    	init.init();
+    	BUInit.init();
     	
     	NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent evt){
-    	init.postInit();
+    	BUInit.postInit();
     }
 }
