@@ -43,7 +43,8 @@ public class BUEntries implements IInitalization{
 	}
 	
 	public void initEntries(){
-		theAltar = new Entry(new IEntry[]{new EntryText()}, "Blood Altar", 1);
+		theAltar = new Entry(new IEntry[]{new EntryBlockText(new ItemStack(ModBlocks.blockAltar))}, "Blood Altar", 1);
+		runes = new Entry(new IEntry[]{new EntryBlockText(new ItemStack(ModBlocks.runeOfSelfSacrifice)), new EntryBlockText(new ItemStack(ModBlocks.runeOfSacrifice)), new EntryBlockText(new ItemStack(ModBlocks.speedRune))}, "Runes", 1);
 		
 		/** Page 1 */
 		ritualWater = new Entry(new IEntry[]{new EntryText()}, "Full Spring", 1);
@@ -68,6 +69,7 @@ public class BUEntries implements IInitalization{
 		registerEntries();
 	}
 	public static Entry theAltar;
+	public static Entry runes;
 	
 	public static Entry ritualCure;
 
@@ -90,6 +92,7 @@ public class BUEntries implements IInitalization{
 	
 	public void registerEntries(){
 		EntryRegistry.registerEntry(BUEntries.categoryBasics, EntryRegistry.basics, BUEntries.theAltar);
+		EntryRegistry.registerEntry(BUEntries.categoryBasics, EntryRegistry.basics, BUEntries.runes);
 		
 		EntryRegistry.registerEntry(BUEntries.categoryRituals, EntryRegistry.rituals, BUEntries.ritualWater);
 		EntryRegistry.registerEntry(BUEntries.categoryRituals, EntryRegistry.rituals, BUEntries.ritualLava);

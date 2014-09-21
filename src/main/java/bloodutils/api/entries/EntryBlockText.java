@@ -1,5 +1,6 @@
 package bloodutils.api.entries;
 
+import java.awt.Color;
 import java.util.List;
 
 import net.minecraft.block.Block;
@@ -9,6 +10,7 @@ import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 
@@ -22,7 +24,7 @@ public class EntryBlockText implements IEntry{
 		this.stack = stack;
 	}
 	public ItemStack stack;
-	
+
 	@Override
 	public void draw(GuiEntry entry, int width, int height, int left, int top, EntityPlayer player, String key, int page, int mX, int mY){
 		drawText(entry, width, height, left, top, player, key, page, mX, mY);
@@ -54,8 +56,8 @@ public class EntryBlockText implements IEntry{
 		GL11.glEnable(GL11.GL_DEPTH_TEST);
 		
 		/** TODO Position */
-		ri.renderItemAndEffectIntoGUI(Minecraft.getMinecraft().fontRenderer, Minecraft.getMinecraft().getTextureManager(), stack, left - (left/2) + 5, top + 15);
-		ri.renderItemOverlayIntoGUI(Minecraft.getMinecraft().fontRenderer, Minecraft.getMinecraft().getTextureManager(), stack, left - (left/2) + 5, top + 15);
+		ri.renderItemAndEffectIntoGUI(Minecraft.getMinecraft().fontRenderer, Minecraft.getMinecraft().getTextureManager(), stack, left - (left/2) + 2, top + 20);
+		ri.renderItemOverlayIntoGUI(Minecraft.getMinecraft().fontRenderer, Minecraft.getMinecraft().getTextureManager(), stack, left - (left/2) + 2, top + 20);
 
         RenderHelper.disableStandardItemLighting();
         
