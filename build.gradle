@@ -21,7 +21,7 @@ ext.buildnumber = 0
 if(System.getenv('BUILD_NUMBER') != null)
     project.buildnumber = System.getenv('BUILD_NUMBER')
 
-version = "1.0_B${buildnumber}"
+version = "1.1_B${buildnumber}"
 group= "BloodUtils" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "BloodUtils"
 
