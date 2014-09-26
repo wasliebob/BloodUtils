@@ -17,8 +17,14 @@ public class BUBlock extends Block{
 		this.name = name;
 
 		GameRegistry.registerBlock(this, this.getUnlocalizedName());
+		
+		postRegistration();
 	}
 	public String name;
+	
+	public void postRegistration(){
+	
+	}
 	
 	@Override
     public void registerBlockIcons(IIconRegister ir){

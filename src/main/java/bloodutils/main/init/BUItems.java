@@ -2,7 +2,9 @@ package bloodutils.main.init;
 
 import wasliecore.interfaces.IInitalization;
 import bloodutils.items.ItemCreativeTool;
+import bloodutils.items.ItemGem;
 import bloodutils.items.ItemGuide;
+import bloodutils.items.ItemMaterial;
 import bloodutils.items.sigils.SigilAdvancedDivination;
 import bloodutils.items.sigils.SigilRitual;
 
@@ -25,11 +27,25 @@ public class BUItems implements IInitalization{
 	}
 	
 	public void initItems(){
+		diamond_blood = new ItemMaterial("Blood Diamond", "diamond_blood", "diamondBlood");
+		gem_empty = new ItemGem("Empty Gem", "empty");
+		gem_earth = new ItemGem("Earth Gem", "earth");
+		gem_fire = new ItemGem("Fire Gem", "fire");
+		gem_water = new ItemGem("Water Gem", "water");
+		gem_air = new ItemGem("Air Gem", "air");
+
 		sigil_ritual = new SigilRitual("Ritual Sigil");
 		sigil_advancedDivination = new SigilAdvancedDivination("Advanced Divination Sigil");
 		guide = new ItemGuide("Blood Tome");
 		tool_creative = new ItemCreativeTool("Creative Tool");
 	}
+	public static ItemMaterial diamond_blood;
+	public static ItemGem gem_empty;
+	public static ItemGem gem_earth;
+	public static ItemGem gem_water;
+	public static ItemGem gem_fire;
+	public static ItemGem gem_air;
+
 	public static SigilRitual sigil_ritual;
 	public static SigilAdvancedDivination sigil_advancedDivination;
 	public static ItemGuide guide;

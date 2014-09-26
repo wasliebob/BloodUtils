@@ -3,9 +3,16 @@ item.ritual sigil.name=Ritual Sigil
 item.advanced divination sigil.name=Advanced Divination Sigil
 item.creative tool.name=Creative Tool
 item.blood tome.name=Blood Tome
+item.earth gem.name=Earth Gem
+item.water gem.name=Water Gem
+item.fire gem.name=Fire Gem
+item.air gem.name=Air Gem
+item.empty gem.name=Elemental Gem Casing
+item.blood diamond.name=Blood Diamond
 ==Blocks==
 tile.altar progression checker.name=Divination Block
 tile.altar builder.name=Altar Builder
+tile.blood diamond block.name=Blood Diamond Block
 ==Entries==
 bu.entry.Blood Altar.1=The altar is the first thing you most likely want to make in blood magic, it's the base of everything. You need a sacrificial knife/orb to fill it up.
 bu.entry.Runes.1=The Rune of Self-Sacrifice is a rune which increases the amount of essence you get for sacrificing yourself by 10 percent.

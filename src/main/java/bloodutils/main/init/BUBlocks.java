@@ -1,9 +1,11 @@
 package bloodutils.main.init;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.material.Material;
 import wasliecore.interfaces.IInitalization;
 import bloodutils.blocks.BlockAltarBuilder;
 import bloodutils.blocks.BlockAltarProgress;
+import bloodutils.blocks.BlockMaterial;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BUBlocks implements IInitalization{
 	@Override
@@ -22,9 +24,11 @@ public class BUBlocks implements IInitalization{
 	}
 	
 	public void initBlocks(){
+		block_bloodDiamond = new BlockMaterial("Blood Diamond Block", Material.iron, "block_bloodDiamond");
 		altarBuilder = new BlockAltarBuilder("Altar Builder");
 		altarProgress = new BlockAltarProgress("Altar Progression Checker");
 	}
+	public static BlockMaterial block_bloodDiamond;
 	public static BlockAltarBuilder altarBuilder;
 	public static BlockAltarProgress altarProgress;
 	
