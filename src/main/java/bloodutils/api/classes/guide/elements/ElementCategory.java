@@ -3,6 +3,7 @@ package bloodutils.api.classes.guide.elements;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 import bloodutils.api.classes.guide.GuiIndex;
 import bloodutils.api.compact.Category;
@@ -30,10 +31,11 @@ public class ElementCategory extends GuiScreen implements IEntryElement{
 	
 	@Override
 	public void drawElement() {
+		IIcon icon = category.iconStack.getIconIndex();
 		Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation("bloodutils:textures/misc/tab.png"));
 		GuiHelper.drawIconWithoutColor(x - 1, y - 1, width + 2 , height + 2, 0);
 		
-		GuiHelper.renderIcon(x, y, width, height, category.icon, this.category.type);		
+		GuiHelper.renderIcon(x, y, width, height, icon, this.category.type);		
 	}
 	
 	@Override
