@@ -15,7 +15,7 @@ import bloodutils.libs.LibMod;
 
 public class BlockAltarProgress extends BUBlock{
 	public BlockAltarProgress(String name) {
-		super(name, Material.rock);
+		super(name, Material.rock, false);
 	}
 	
 	@Override

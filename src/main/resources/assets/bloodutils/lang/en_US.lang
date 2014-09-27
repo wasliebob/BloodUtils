@@ -7,12 +7,27 @@ item.earth gem.name=Earth Gem
 item.water gem.name=Water Gem
 item.fire gem.name=Fire Gem
 item.air gem.name=Air Gem
+item.light gem.name=Light Gem
+item.darkness gem.name=Darkness Gem
+item.rainbow gem.name=Rainbow Gem
 item.empty gem.name=Elemental Gem Casing
 item.blood diamond.name=Blood Diamond
+item.blood iron ingot.name=Blood Diamond Ingot
 ==Blocks==
 tile.altar progression checker.name=Divination Block
 tile.altar builder.name=Altar Builder
 tile.blood diamond block.name=Blood Diamond Block
+tile.blood iron block.name=Blood Iron Block
+tile.area earth.name=Magic Ritual: Earth
+tile.area fire.name=Magic Ritual: Fire
+tile.area water.name=Magic Ritual: Water
+tile.area air.name=Magic Ritual: Air
+tile.area darkness.name=Magic Ritual: Darkness
+tile.area light.name=Magic Ritual: Light
+tile.area rainbow.name=Magic Ritual: Rainbow
+tile.earth block.name=Earth Block
+tile.discoball.name=Discoball
+tile.discoball stairs.name=Disco Stairs
 ==Entries==
 bu.entry.Blood Altar.1=The altar is the first thing you most likely want to make in blood magic, it's the base of everything. You need a sacrificial knife/orb to fill it up.
 bu.entry.Runes.1=The Rune of Self-Sacrifice is a rune which increases the amount of essence you get for sacrificing yourself by 10 percent.
@@ -45,6 +60,8 @@ bu.entry.Magnetism.1=This ritual searches in a 7x7 area beneath itself and looks
 bu.entry.Eternal Soul.1=Meant to be the pinnacle of self-sacrifice, this ritual will use your body as a conduit to fill the nearby altar from your Soul Network. For every LP that it puts into the altar, it will take 2LP from your Network, and will only function while the activator is around the ritual.
 bu.entry.Eternal Soul.2=What is more, it will put the LP into the input buffer of the altar. It's best to use good runes for your altar to maximize the benefits. Also, while in the ritual's effect and when work is being done, the user's health will be set to 1 heart. Make sure to only use this ritual in a safe place or near your comrades. 
 bu.entry.Curing.1=This ritual can become really helpful, this ritual cures a player from all potion effects, it basicly works like milk.
+bu.entry.Elemental Rituals.1=These blocks are capable of storing a whole (small) ritual inside them. It's a long lost art, which still is not fully revealed at this point.
+bu.entry.Elemental Rituals.2=These so called Elemental Rituals exist out of a three components, two of these area already discovered. One of the three components is the Empty Gem Casing. The second Component is a blood diamond, forged from blood and a diamond. The third component still remains to be found.
 bu.entry.Debug.1=Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
 ==Misc==
 itemGroup.tabBloodUtilsMain=Blood Utils: Main

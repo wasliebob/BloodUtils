@@ -7,7 +7,6 @@ public class ItemGem extends BUItem{
 	public ItemGem(String name, String gemType){
 		super(name);
 		this.gemType = gemType;
-		this.isWIP = true;
 	}
 	public String gemType;
 	

@@ -1,7 +1,6 @@
 package bloodutils.items;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraftforge.oredict.OreDictionary;
 import bloodutils.libs.LibMod;
 
 public class ItemMaterial extends BUItem{
@@ -16,7 +15,7 @@ public class ItemMaterial extends BUItem{
 	@Override
 	public void postRegistration(){
 		super.postRegistration();
-		OreDictionary.registerOre(this.oreDict, this);
+		//OreDictionary.registerOre(this.oreDict, this);
 	}
 	
 	@Override

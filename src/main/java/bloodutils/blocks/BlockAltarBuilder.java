@@ -20,7 +20,7 @@ import bloodutils.tiles.TileAltarBuilder;
 public class BlockAltarBuilder extends BUContainerBlock{
 
 	public BlockAltarBuilder(String name) {
-		super(name, Material.rock);
+		super(name, Material.rock, false);
 	}
 	
 	@Override

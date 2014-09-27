@@ -24,6 +24,7 @@ public class BU {
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event){
 		proxy.load();
+		Config.loadConfig(event);
 		BUInit.preInit();
     }
     

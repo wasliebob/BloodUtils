@@ -10,11 +10,13 @@ import bloodutils.main.init.BUTabs;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BUContainerBlock extends BlockContainer{
-	public BUContainerBlock(String name, Material material) {
+	public BUContainerBlock(String name, Material material, boolean hidden) {
 		super(material);
 		setBlockName(name.toLowerCase());
 		setHardness(1.0F);
-		setCreativeTab(BUTabs.tabMain);
+		
+		if(!hidden)
+			setCreativeTab(BUTabs.tabMain);
 		
 		this.name = name;
 

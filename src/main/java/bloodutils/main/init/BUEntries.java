@@ -1,6 +1,7 @@
 package bloodutils.main.init;
 
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import wasliecore.interfaces.IInitalization;
 import WayofTime.alchemicalWizardry.ModBlocks;
 import WayofTime.alchemicalWizardry.ModItems;
@@ -51,7 +52,7 @@ public class BUEntries implements IInitalization{
 	}
 	
 	public void initEntries(){
-		theAltar = new Entry(new IEntry[]{new EntryItemText(new ItemStack(ModBlocks.blockAltar))}, "Blood Altar", 1);
+		theAltar = new Entry(new IEntry[]{new EntryItemText(new ItemStack(ModBlocks.blockAltar), "Blood Altar")}, EnumChatFormatting.BLUE + "Blood Altar", 1);
 		runes = new Entry(new IEntry[]{new EntryItemText(new ItemStack(ModBlocks.runeOfSelfSacrifice)), new EntryItemText(new ItemStack(ModBlocks.runeOfSacrifice)), new EntryItemText(new ItemStack(ModBlocks.speedRune))}, "Runes", 1);
 		
 		/** Page 1 */
@@ -74,8 +75,10 @@ public class BUEntries implements IInitalization{
 		blockDivination = new Entry(new IEntry[]{new EntryItemText(new ItemStack(BUBlocks.altarProgress)), new EntryCraftingRecipe(BURecipes.altarProgress)}, "Divination Block", 1);
 		sigilAdvancedDivination = new Entry(new IEntry[]{new EntryItemText(new ItemStack(BUItems.sigil_advancedDivination)), new EntryAltarRecipe(BURecipes.advancedSigil)}, "Advanced Divination", 1);
 		
+		elementRituals = new Entry(new IEntry[]{new EntryItemText(new ItemStack(BUBlocks.darknessArea)), new EntryText(), new EntryCraftingRecipe(BURecipes.gemEmpty), new EntryAltarRecipe(BURecipes.diamondBlood)}, "Elemental Rituals", 1);
+		
 		/** Debug */
-		debug = new Entry(new IEntry[]{new EntryItemText(new ItemStack(ModBlocks.blockAltar))}, "Debug", 1);
+		debug = new Entry(new IEntry[]{new EntryText("Debug")}, EnumChatFormatting.AQUA + "De" + EnumChatFormatting.RED + "bug", 1);
 		registerEntries();
 	}
 	public static Entry theAltar;
@@ -100,6 +103,8 @@ public class BUEntries implements IInitalization{
 	public static Entry ritualMoon;
 	public static Entry ritualSoul;
 	
+	public static Entry elementRituals;
+
 	public static Entry debug;
 	
 	public void registerEntries(){
@@ -124,6 +129,7 @@ public class BUEntries implements IInitalization{
 		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.ritualCure);
 		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.blockDivination);
 		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.sigilAdvancedDivination);
+		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.elementRituals);
 
 		/** Debug */
 		EntryRegistry.registerEntry(BUEntries.categoryBasics, EntryRegistry.basics, BUEntries.debug);

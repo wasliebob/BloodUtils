@@ -8,11 +8,13 @@ import bloodutils.libs.LibMod;
 import bloodutils.main.init.BUTabs;
 
 public class BUBlock extends Block{
-	public BUBlock(String name, Material material) {
+	public BUBlock(String name, Material material, boolean hidden) {
 		super(material);
 		setBlockName(name.toLowerCase());
 		setHardness(1.0F);
-		setCreativeTab(BUTabs.tabMain);
+		
+		if(!hidden)
+			setCreativeTab(BUTabs.tabMain);
 		
 		this.name = name;
 

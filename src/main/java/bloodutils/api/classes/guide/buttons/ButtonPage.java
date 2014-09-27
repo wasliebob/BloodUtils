@@ -19,7 +19,9 @@ public class ButtonPage extends GuiButton {
 		int state = getHoverState(field_146123_n);
 		x = this.xPosition + width / 2 - 30;
 		y = this.yPosition + (height - 6) / 2;
+		mc.fontRenderer.setUnicodeFlag(true);
 		mc.fontRenderer.drawString(displayString, x + (state == 2 ? 5 : 0), y, calcColor(state));
+		mc.fontRenderer.setUnicodeFlag(false);
 	}
 	
 	public int calcColor(int state){

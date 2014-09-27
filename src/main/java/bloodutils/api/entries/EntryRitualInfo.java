@@ -19,7 +19,9 @@ public class EntryRitualInfo implements IEntry{
 		int x, y;
 		x = left + width / 2 - 58;
 		y = (top + 15);
+		Minecraft.getMinecraft().fontRenderer.setUnicodeFlag(true);
 		Minecraft.getMinecraft().fontRenderer.drawString("Cost: " + this.cost + " LP", x, y, 0);
+		Minecraft.getMinecraft().fontRenderer.setUnicodeFlag(false);
 	}
 	
 	@SuppressWarnings("rawtypes")
