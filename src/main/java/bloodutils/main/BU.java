@@ -23,13 +23,14 @@ public class BU {
     
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event){
-		proxy.load();
+		proxy.preInit();
 		Config.loadConfig(event);
 		BUInit.preInit();
     }
     
     @EventHandler
     public void init(FMLInitializationEvent event){
+    	proxy.init();
     	BUInit.init();
     	
     	NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
@@ -37,6 +38,7 @@ public class BU {
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent evt){
+    	proxy.postInit();
     	BUInit.postInit();
     }
 }

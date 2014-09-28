@@ -29,7 +29,7 @@ public class BUItems implements IInitalization{
 	public void initItems(){
 		diamond_blood = new ItemMaterial("Blood Diamond", "diamond_blood", "diamondBlood");
 		iron_blood = new ItemMaterial("Blood Iron Ingot", "iron_blood", "ironBlood");
-
+		bloodShard_royal = new ItemMaterial("Royal Blood Shard", "bloodShard_royal", "bloodShardRoyal");
 		gem_empty = new ItemGem("Empty Gem", "empty");
 		gem_earth = new ItemGem("Earth Gem", "earth");
 		gem_fire = new ItemGem("Fire Gem", "fire");
@@ -46,6 +46,7 @@ public class BUItems implements IInitalization{
 	}
 	public static ItemMaterial diamond_blood;
 	public static ItemMaterial iron_blood;
+	public static ItemMaterial bloodShard_royal;
 	public static ItemGem gem_empty;
 	public static ItemGem gem_earth;
 	public static ItemGem gem_water;

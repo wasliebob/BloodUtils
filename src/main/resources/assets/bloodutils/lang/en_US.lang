@@ -13,6 +13,7 @@ item.rainbow gem.name=Rainbow Gem
 item.empty gem.name=Elemental Gem Casing
 item.blood diamond.name=Blood Diamond
 item.blood iron ingot.name=Blood Diamond Ingot
+item.royal blood shard.name=Royal Blood Shard
 ==Blocks==
 tile.altar progression checker.name=Divination Block
 tile.altar builder.name=Altar Builder
@@ -28,6 +29,8 @@ tile.area rainbow.name=Magic Ritual: Rainbow
 tile.earth block.name=Earth Block
 tile.discoball.name=Discoball
 tile.discoball stairs.name=Disco Stairs
+==Entities==
+entity.BloodUtils.royal.name=Royal
 ==Entries==
 bu.entry.Blood Altar.1=The altar is the first thing you most likely want to make in blood magic, it's the base of everything. You need a sacrificial knife/orb to fill it up.
 bu.entry.Runes.1=The Rune of Self-Sacrifice is a rune which increases the amount of essence you get for sacrificing yourself by 10 percent.
@@ -63,5 +66,6 @@ bu.entry.Curing.1=This ritual can become really helpful, this ritual cures a pla
 bu.entry.Elemental Rituals.1=These blocks are capable of storing a whole (small) ritual inside them. It's a long lost art, which still is not fully revealed at this point.
 bu.entry.Elemental Rituals.2=These so called Elemental Rituals exist out of a three components, two of these area already discovered. One of the three components is the Empty Gem Casing. The second Component is a blood diamond, forged from blood and a diamond. The third component still remains to be found.
 bu.entry.Debug.1=Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+bu.entry.Debug.2=Yes Altar Tier explaination will come later :).
 ==Misc==
 itemGroup.tabBloodUtilsMain=Blood Utils: Main

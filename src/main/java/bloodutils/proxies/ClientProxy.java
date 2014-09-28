@@ -2,6 +2,12 @@ package bloodutils.proxies;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.World;
+import net.minecraftforge.client.MinecraftForgeClient;
+import bloodutils.client.renders.RenderGuide;
+import bloodutils.client.renders.RenderRoyal;
+import bloodutils.entities.EntityRoyal;
+import bloodutils.main.init.BUItems;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends CommonProxy{
 	@Override
@@ -14,6 +20,9 @@ public class ClientProxy extends CommonProxy{
 	
 	@Override
 	public void render(){
+		MinecraftForgeClient.registerItemRenderer(BUItems.guide, new RenderGuide());
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityRoyal.class, new RenderRoyal());
 	}
 	
 	@Override

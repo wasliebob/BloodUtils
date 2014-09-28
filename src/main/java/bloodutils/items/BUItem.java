@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BUItem extends Item{
 	public BUItem(String name){
 		
-		setMaxStackSize(1);
+		setMaxStackSize(64);
 		setUnlocalizedName(name.toLowerCase());
 		setCreativeTab(BUTabs.tabMain);
 

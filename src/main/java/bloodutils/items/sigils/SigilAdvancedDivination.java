@@ -26,6 +26,7 @@ import bloodutils.libs.LibMod;
 public class SigilAdvancedDivination extends BUItem implements IBindable{
 	public SigilAdvancedDivination(String name) {
 		super(name);
+		setMaxStackSize(1);
 	}
 
 	@Override

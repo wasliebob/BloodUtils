@@ -26,6 +26,7 @@ import bloodutils.libs.LibMod;
 public class ItemCreativeTool extends BUItem implements IBindable{
 	public ItemCreativeTool(String name) {
 		super(name);
+		setMaxStackSize(1);
 		this.setHasSubtypes(true);
 		modes.put(0, this.altarFilling);
 		modes.put(1, this.networkFilling);

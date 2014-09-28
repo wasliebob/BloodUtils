@@ -3,11 +3,19 @@ package bloodutils.proxies;
 import net.minecraft.world.World;
 
 public class CommonProxy {
-	public void load(){
+	public void preInit(){
+		
+	}
+	
+	public void init(){
 		registerPackets();
         registerParticles();
         render();
         bindKeys();
+	}
+	
+	public void postInit(){
+		
 	}
 	
     public void registerParticles(){}

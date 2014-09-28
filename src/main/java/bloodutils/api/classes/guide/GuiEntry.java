@@ -3,6 +3,7 @@ package bloodutils.api.classes.guide;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.input.Keyboard;
@@ -20,6 +21,14 @@ public class GuiEntry extends GuiScreen{
 		this.player = player;
 		this.category = category;
 	}
+	
+	public GuiEntry(String key, EntityPlayer player, Category category, int currPage){
+		this.key = key;
+		this.player = player;
+		this.category = category;
+		this.currPage = currPage;
+	}
+	
     private static final ResourceLocation gui = new ResourceLocation("bloodutils:textures/gui/guide.png");
 	int gwidth = 192;
 	int gheight = 192;
@@ -123,6 +132,11 @@ public class GuiEntry extends GuiScreen{
 	
 	@Override
     public void onGuiClosed(){
-		
+		ItemStack held = player.getHeldItem();
+		if(held.hasTagCompound()){
+			held.getTagCompound().setString("CATEGORY", this.category.name);
+			held.getTagCompound().setString("KEY", this.key);
+			held.getTagCompound().setInteger("PAGE", this.currPage);
+		}
 	}
 }

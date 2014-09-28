@@ -5,6 +5,7 @@ import java.util.HashMap;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.input.Keyboard;
@@ -21,6 +22,12 @@ public class GuiIndex extends GuiScreen{
 	public GuiIndex(Category category, EntityPlayer player){
 		this.category = category;
 		this.player = player;
+	}
+	
+	public GuiIndex(Category category, EntityPlayer player, int currPage){
+		this.category = category;
+		this.player = player;
+		this.currPage = currPage;
 	}
     private static final ResourceLocation gui = new ResourceLocation("bloodutils:textures/gui/guide.png");
     GuiButton prev, next, back;
@@ -193,4 +200,14 @@ public class GuiIndex extends GuiScreen{
     		}
     	}
     }
+    
+	@Override
+    public void onGuiClosed(){
+		ItemStack held = player.getHeldItem();
+		if(held.hasTagCompound()){
+			held.getTagCompound().setString("CATEGORY", this.category.name);
+			held.getTagCompound().setString("KEY", "0");
+			held.getTagCompound().setInteger("PAGE", this.currPage);
+		}
+	}
 }

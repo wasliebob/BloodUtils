@@ -9,6 +9,7 @@ import bloodutils.api.compact.Category;
 import bloodutils.api.compact.Entry;
 import bloodutils.api.entries.EntryAltarRecipe;
 import bloodutils.api.entries.EntryCraftingRecipe;
+import bloodutils.api.entries.EntryImage;
 import bloodutils.api.entries.EntryItemText;
 import bloodutils.api.entries.EntryRitualInfo;
 import bloodutils.api.entries.EntryText;
@@ -46,9 +47,9 @@ public class BUEntries implements IInitalization{
 	public static Category categoryBloodUtils;
 	
 	public void registerCategories(){
-		EntryRegistry.categories.add(BUEntries.categoryBasics);
-		EntryRegistry.categories.add(BUEntries.categoryRituals);
-		EntryRegistry.categories.add(BUEntries.categoryBloodUtils);
+		EntryRegistry.registerCategories(BUEntries.categoryBasics);
+		EntryRegistry.registerCategories(BUEntries.categoryRituals);
+		EntryRegistry.registerCategories(BUEntries.categoryBloodUtils);
 	}
 	
 	public void initEntries(){
@@ -78,7 +79,7 @@ public class BUEntries implements IInitalization{
 		elementRituals = new Entry(new IEntry[]{new EntryItemText(new ItemStack(BUBlocks.darknessArea)), new EntryText(), new EntryCraftingRecipe(BURecipes.gemEmpty), new EntryAltarRecipe(BURecipes.diamondBlood)}, "Elemental Rituals", 1);
 		
 		/** Debug */
-		debug = new Entry(new IEntry[]{new EntryText("Debug")}, EnumChatFormatting.AQUA + "De" + EnumChatFormatting.RED + "bug", 1);
+		debug = new Entry(new IEntry[]{new EntryText("Debug"), new EntryImage("bloodutils:textures/misc/screenshots/t1.png", 854, 480, "Debug")}, EnumChatFormatting.AQUA + "De" + EnumChatFormatting.RED + "bug", 1);
 		registerEntries();
 	}
 	public static Entry theAltar;

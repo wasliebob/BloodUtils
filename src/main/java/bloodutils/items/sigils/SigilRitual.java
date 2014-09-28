@@ -15,6 +15,7 @@ import bloodutils.libs.LibMod;
 public class SigilRitual extends BUItem{
 	public SigilRitual(String name) {
 		super(name);
+		setMaxStackSize(1);
 	}
 
 	@Override
