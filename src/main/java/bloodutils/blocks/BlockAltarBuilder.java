@@ -1,17 +1,11 @@
 package bloodutils.blocks;
 
-import java.util.HashMap;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 import WayofTime.alchemicalWizardry.ModBlocks;
 import bloodutils.libs.LibMod;
@@ -25,7 +19,7 @@ public class BlockAltarBuilder extends BUContainerBlock{
 	
 	@Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float cX, float cY, float cZ) {
-		if(!world.isRemote){
+		if(!world.isRemote && world.getTileEntity(x, y, z) instanceof TileAltarBuilder){
 			TileAltarBuilder te = (TileAltarBuilder)world.getTileEntity(x, y, z);
 			int tier = te.getTier();
 			if(player.capabilities.isCreativeMode){

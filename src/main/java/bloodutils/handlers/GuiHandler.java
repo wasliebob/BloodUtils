@@ -28,7 +28,7 @@ public class GuiHandler implements IGuiHandler {
             switch(id){
             case 0:
             	if(held.hasTagCompound() && held.getTagCompound().getString("CATEGORY") != null){
-            		if(held.hasTagCompound() && held.getTagCompound().getString("KEY") != null && held.hasTagCompound() && held.getTagCompound().getString("KEY") != "0"){
+            		if(held.hasTagCompound() && held.getTagCompound().getString("KEY") != null && held.getTagCompound().getString("KEY") != "0"){
             			String cate = held.getTagCompound().getString("CATEGORY");
             			String key = held.getTagCompound().getString("KEY");
             			int page = held.getTagCompound().getInteger("PAGE");

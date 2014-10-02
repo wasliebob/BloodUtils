@@ -77,6 +77,7 @@ public class BUEntries implements IInitalization{
 		sigilAdvancedDivination = new Entry(new IEntry[]{new EntryItemText(new ItemStack(BUItems.sigil_advancedDivination)), new EntryAltarRecipe(BURecipes.advancedSigil)}, "Advanced Divination", 1);
 		
 		elementRituals = new Entry(new IEntry[]{new EntryItemText(new ItemStack(BUBlocks.darknessArea)), new EntryText(), new EntryCraftingRecipe(BURecipes.gemEmpty), new EntryAltarRecipe(BURecipes.diamondBlood)}, "Elemental Rituals", 1);
+		reviving = new Entry(new IEntry[]{new EntryText(), new EntryCraftingRecipe(BURecipes.reviver)}, "Reviving", 1);
 		
 		/** Debug */
 		debug = new Entry(new IEntry[]{new EntryText("Debug"), new EntryImage("bloodutils:textures/misc/screenshots/t1.png", 854, 480, "Debug")}, EnumChatFormatting.AQUA + "De" + EnumChatFormatting.RED + "bug", 1);
@@ -105,6 +106,7 @@ public class BUEntries implements IInitalization{
 	public static Entry ritualSoul;
 	
 	public static Entry elementRituals;
+	public static Entry reviving;
 
 	public static Entry debug;
 	
@@ -131,6 +133,7 @@ public class BUEntries implements IInitalization{
 		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.blockDivination);
 		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.sigilAdvancedDivination);
 		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.elementRituals);
+		EntryRegistry.registerEntry(BUEntries.categoryBloodUtils, EntryRegistry.bloodUtils, BUEntries.reviving);
 
 		/** Debug */
 		EntryRegistry.registerEntry(BUEntries.categoryBasics, EntryRegistry.basics, BUEntries.debug);

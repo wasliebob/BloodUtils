@@ -55,9 +55,13 @@ public class GuiEntry extends GuiScreen{
         this.buttonList.add(prev = new ButtonNext(501, k + 38,  top + 160, false));
 		
         Entry e = EntryRegistry.entries.get(this.category).get(this.key);
-        IEntry entry = e.entry[this.currPage - 1];
-        if(entry != null)
-			entry.initGui(gwidth, gheight, left, top, player, this.buttonList);
+        if(e != null){
+	        IEntry entry = e.entry[this.currPage - 1];
+	        if(entry != null)
+				entry.initGui(gwidth, gheight, left, top, player, this.buttonList);
+        }else{
+			mc.displayGuiScreen(new GuiCategories(this.player));
+        }
 	}
 	
 	@Override
@@ -124,9 +128,13 @@ public class GuiEntry extends GuiScreen{
 			}
 		}else{
 			Entry e = EntryRegistry.entries.get(this.category).get(this.key);
-	        IEntry entry = e.entry[this.currPage];
-	        if(entry != null)
-	        	entry.actionPerformed(button);
+			if(e != null){
+				IEntry entry = e.entry[this.currPage];
+		        if(entry != null)
+		        	entry.actionPerformed(button);
+			}else{
+    			mc.displayGuiScreen(new GuiCategories(this.player));
+			}
 		}
 	}
 	

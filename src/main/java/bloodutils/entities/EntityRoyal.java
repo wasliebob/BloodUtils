@@ -117,6 +117,7 @@ public class EntityRoyal extends EntityCreature implements IBossDisplayData{
 			for(EntityPlayer player : players){
 				EntityArrow arrow = new EntityArrow(worldObj, this, player, 1, 1);
 				arrow.canBePickedUp = 0;
+
 				worldObj.spawnEntityInWorld(arrow);
 			}
 		}

@@ -12,6 +12,7 @@ import bloodutils.blocks.BlockAltarProgress;
 import bloodutils.blocks.BlockEarth;
 import bloodutils.blocks.BlockMagicArea;
 import bloodutils.blocks.BlockMaterial;
+import bloodutils.blocks.BlockReviver;
 import bloodutils.blocks.blockEffect.BlockEffectAir;
 import bloodutils.blocks.blockEffect.BlockEffectDarkness;
 import bloodutils.blocks.blockEffect.BlockEffectEarth;
@@ -75,7 +76,8 @@ public class BUBlocks implements IInitalization{
 
 		altarBuilder = new BlockAltarBuilder("Altar Builder");
 		altarProgress = new BlockAltarProgress("Altar Progression Checker");
-	
+		reviver = new BlockReviver("Reviver");
+		
 		earthArea = new BlockMagicArea("Area Earth", "earth", new BlockEffectEarth());
 		fireArea = new BlockMagicArea("Area Fire", "fire", new BlockEffectFire());
 		airArea = new BlockMagicArea("Area Air", "air", new BlockEffectAir());
@@ -97,7 +99,8 @@ public class BUBlocks implements IInitalization{
 	public static BlockMaterial block_bloodIron;
 	public static BlockAltarBuilder altarBuilder;
 	public static BlockAltarProgress altarProgress;
-	
+	public static BlockReviver reviver;;
+
 	public static BlockMagicArea earthArea;
 	public static BlockMagicArea fireArea;
 	public static BlockMagicArea airArea;
@@ -108,7 +111,8 @@ public class BUBlocks implements IInitalization{
 
 	public void initTiles(){
 		GameRegistry.registerTileEntity(bloodutils.tiles.TileAltarBuilder.class, "bu_autoBuilder");
-		
+		GameRegistry.registerTileEntity(bloodutils.tiles.TileReviver.class, "bu_reviver");
+
 		GameRegistry.registerTileEntity(bloodutils.tiles.TileEarthArea.class, "bu_effectEarth");
 		GameRegistry.registerTileEntity(bloodutils.tiles.TileAirArea.class, "bu_effectAir");
 		GameRegistry.registerTileEntity(bloodutils.tiles.TileFireArea.class, "bu_effectFire");

@@ -55,6 +55,18 @@ public class BURecipes implements IInitalization{
 			'I', Blocks.glass_pane});
 		gemEmpty = RecipeRegistry.getLatestCraftingRecipe();
 		
+		RecipeRegistry.addShapedRecipe(new ItemStack(BUBlocks.reviver), new Object[]{
+			"XNX",
+			"YIZ",
+			"XMX",
+			'X', Blocks.nether_brick,
+			'Y', BUItems.gem_light,
+			'Z', BUItems.gem_darkness,
+			'M', BUItems.gem_water,
+			'N', BUItems.gem_fire,
+			'I', BUBlocks.rainbowArea});
+		reviver = RecipeRegistry.getLatestCraftingRecipe();
+		
 		RecipeRegistry.addAltarRecipe(new ItemStack(BUItems.sigil_advancedDivination), new ItemStack(ModItems.divinationSigil), 1, 1000, 10, 10, false);
 		advancedSigil = RecipeRegistry.getLatestAltarRecipe();
 		
@@ -118,6 +130,7 @@ public class BURecipes implements IInitalization{
 	
 	public static IRecipe altarProgress;
 	public static IRecipe gemEmpty;
-	
+	public static IRecipe reviver;;
+
 	public static HashMap<Item, Block> blockRituals = new HashMap<Item, Block>();
 }

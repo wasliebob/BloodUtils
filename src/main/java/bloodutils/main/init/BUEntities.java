@@ -4,12 +4,11 @@ import java.awt.Color;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
-import net.minecraft.item.ItemStack;
 import wasliecore.interfaces.IInitalization;
-import WayofTime.alchemicalWizardry.api.summoningRegistry.SummoningHelper;
-import WayofTime.alchemicalWizardry.api.summoningRegistry.SummoningRegistry;
-import WayofTime.alchemicalWizardry.common.summoning.SummoningHelperAW;
+import bloodutils.api.compact.CompactItem;
+import bloodutils.api.registries.RevivingRegistry;
 import bloodutils.entities.EntityRoyal;
+import bloodutils.entities.reviving.RevivingRoyal;
 import bloodutils.main.BU;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
@@ -37,11 +36,15 @@ public class BUEntities implements IInitalization{
 	}
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void postInit() {
+		initReviving();
+	}
+	
+	public void initReviving(){
+		RevivingRegistry.registerReviving(new CompactItem(BUItems.diamond_blood, BUItems.gem_darkness), new RevivingRoyal());
 	}
 }
