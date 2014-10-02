@@ -1,12 +1,12 @@
-==Items==
+#==Items==
 item.ritual sigil.name=仪式印记
 item.advanced divination sigil.name=进阶占卜印记
 item.creative tool.name=无限LP工具
 item.blood tome.name=血之卷轴
-==Blocks==
+#==Blocks==
 tile.altar progression checker.name=占卜符文
 tile.altar builder.name=祭坛搭建器
-==Entries==
+#==Entries==
 bu.entry.Blood Altar.1=要成为血魔法使就必须先拥有血祭坛, 它是最基础的工具. 你需要用牺牲匕首或牺牲宝珠来向祭坛灌输你的血.
 bu.entry.Runes.1=为你的血祭坛装上牺牲符文, 通过牺牲匕首灌输的生命源质将增加10%.
 bu.entry.Runes.2=为你的血祭坛装上献祭符文, 通过献祭匕首灌输的生命源质将增加10%.
@@ -39,5 +39,5 @@ bu.entry.Eternal Soul.1=永魂之泣仪式必须配合4级血祭坛使用. 当�
 bu.entry.Eternal Soul.2=除此之外, 被传输的LP会首先积攒在血祭坛的缓存区, 这就代表着你可以使用一些符文来使传输的LP增值, 例如牺牲符文. 另外, 如果你的生命值被永魂之泣仪式消耗到仅剩1颗心, 那么仪式将不再运作. 请确保你呆在安全的地方进行献祭!
 bu.entry.Curing.1=治愈仪式能消除玩家携有的一切负面效果, 就像牛奶那样.
 bu.entry.Debug.1=滴滴哒哒...滴滴哒哒...滴滴哒哒...滴滴哒哒...滴滴哒哒...滴滴哒哒...滴滴哒哒....
-==Misc==
+#==Misc==
 itemGroup.tabBloodUtilsMain=Blood Utils
