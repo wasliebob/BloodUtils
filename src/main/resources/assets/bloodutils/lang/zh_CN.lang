@@ -27,11 +27,11 @@ tile.area darkness.name=魔力仪式: 暗黑
 tile.area light.name=魔力仪式: 光明
 tile.area rainbow.name=魔力仪式: 彩虹
 tile.earth block.name=地之泥土
-tile.discoball.name=Discoball
-tile.discoball stairs.name=Disco Stairs
+tile.discoball.name=迪斯科球
+tile.discoball stairs.name=迪斯科楼梯
 tile.reviver.name=复苏祭坛
 --Entities--
-entity.BloodUtils.royal.name=高贵的
+entity.BloodUtils.royal.name=高贵君王
 --Entries--
 bu.entry.Blood Altar.1=血之祭坛是最基础的工具, 你需要用牺牲匕首或牺牲宝珠来向祭坛灌输你的血
 bu.entry.Runes.1=为你的血祭坛装上牺牲符文, 通过牺牲匕首灌输的生命源质将增加10%
